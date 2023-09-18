@@ -1,7 +1,9 @@
 // referência: https://www.youtube.com/watch?v=SRBLmyeUFFI
 require('dotenv/config');
-const products = require('../Products/menu');
+const products = require('../util/menu');
+const userModel = require('../models/UserModel');
 const Product = require('../models/MenuModel');
+const user = require('../util/user');
 const connectDB = require('./connection');
 
 connectDB();
@@ -9,8 +11,10 @@ connectDB();
 const importProducts = async () => {
   try {
     await Product.deleteMany();
+    await userModel.deleteMany();
 
     await Product.insertMany(products);
+    await userModel.insertMany(user);
 
     console.log('Data Imported');
     process.exit();
@@ -23,6 +27,7 @@ const importProducts = async () => {
 const deleteProducts = async () => {
   try {
     await Product.deleteMany();
+    await userModel.deleteMany();
 
     console.log('Data destroyed');
     process.exit();
