@@ -87,7 +87,7 @@ const menulist = [
     id: 15,
     name: 'Frango a passarinho (Grande)',
     price: 43.00,
-    category: 'frango',
+    category: 'F  rango',
   },
   {
     id: 16,
