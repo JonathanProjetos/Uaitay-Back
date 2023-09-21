@@ -1,13 +1,24 @@
 const express = require('express');
+require('dotenv').config();
 require('express-async-errors')
 const cors = require('cors');
 const RouteMenu = require('./routes/RouteMenu');
 const RouteUser = require('./routes/RouteUser');
+const cookieParser = require('cookie-parser');
 
 const app = express();
 
 app.use(express.json());
-app.use(cors());
+
+const front = process.env.FRONT_URL || 'http://localhost:3000';
+
+app.use(cors({
+  origin: front,
+  credentials: true,
+}));
+
+app.use(cookieParser());
+
 
 app.use('/', RouteMenu);
 app.use('/', RouteUser);
