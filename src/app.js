@@ -10,10 +10,10 @@ const app = express();
 
 app.use(express.json());
 
-const front = process.env.FRONT_URL || 'http://localhost:3000';
+// const front = process.env.FRONT_URL || 'http://localhost:3000';
 
 app.use(cors({
-  origin: front,
+  // origin: front,
   credentials: true,
 }));
 
