@@ -7,11 +7,12 @@ const validadeBodyCreateProduct = (body) => {
       'any.required': '400|O campo "name" é obrigatório',
       'string.min': '400|O campo "name" deve ter pelo menos 5 caracteres',
     }),
-    price: joi.string().min(0).required().messages({
+    price: joi.number().greater(0).required().messages({
+      'number.base': '400|O campo "price" deve ser um número',
       'number.empty': '400|O campo "price" não pode ser vazio',
       'any.required': '400|O campo "price" é obrigatório',
-      'number.min': '400|O campo "price" deve ser maior que zero',
-    }),
+      'number.greater': '400|O campo "price" deve ser maior que zero',
+    }).strict(),
     category: joi.string().required().messages({
       'string.empty': '400|O campo "category" não pode ser vazio',
       'any.required': '400|O campo "category" é obrigatório',
