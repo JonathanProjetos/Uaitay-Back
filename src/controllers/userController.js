@@ -6,7 +6,7 @@ const userController = {
     const { menssage, token } = await userServices.getUser(req.body);
 
     console.log(token);
-    res.cookie('token', token, { httpOnly: true, secure: false, path: '/', maxAge: 3600000 });
+    res.cookie('token', token, { httpOnly: true, secure: true, path: '/', maxAge: 3600000 });
     res.status(200).json({ menssage });
   },
   
