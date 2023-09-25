@@ -10,6 +10,7 @@ const app = express();
 
 app.use(express.json());
 
+app.use(cookieParser());
 
 app.use(cors({
   origin: 'https://uai-tay-front.vercel.app',
@@ -19,13 +20,8 @@ app.use(cors({
 app.use((_req, res, next) => {
   res.header('Access-Control-Allow-Origin', 'https://uai-tay-front.vercel.app');
   res.header('Access-Control-Allow-Credentials', true);
-  res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
-  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
   next();
 });
-
-app.use(cookieParser());
-
 
 app.use('/', RouteMenu);
 app.use('/', RouteUser);

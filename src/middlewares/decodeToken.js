@@ -5,7 +5,7 @@ module.exports = {
   verifyToken: (req, _res, next) => {
     try {
       let token = req.cookies['token'];
-      console.log(token);
+      console.log("token", token);
       const dados = tokenFunction.validateToken(token);
       req.email = dados.email;
       next();
