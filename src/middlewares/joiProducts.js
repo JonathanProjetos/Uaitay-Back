@@ -27,4 +27,21 @@ const validadeBodyCreateProduct = (body) => {
   return value;
 }
 
-module.exports = validadeBodyCreateProduct;
+const validadeNameFromDeleteProduct = (name) => {
+  const schemaName = joi.string().required().messages({
+    'string.empty': '400|O campo "name" não pode ser vazio',
+    'any.required': '400|O campo "name" é obrigatório',
+  });
+
+  const { error , value } = schemaName.validate(name);
+
+  if(error) {
+    throw error;
+  }
+  return value;
+}
+
+module.exports = {
+  validadeBodyCreateProduct,
+  validadeNameFromDeleteProduct
+};
