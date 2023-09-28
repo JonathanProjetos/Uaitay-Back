@@ -5,5 +5,6 @@ const RouteMenu = Router();
 
 RouteMenu.get('/menu', menuController.getAllProductsMenu);
 RouteMenu.post('/create-product', menuController.createProductMenu);
+RouteMenu.delete('/delete-product', menuController.deleteProduct);
 
 module.exports = RouteMenu;
