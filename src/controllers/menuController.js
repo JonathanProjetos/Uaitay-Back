@@ -10,6 +10,13 @@ const menuController = {
     const newProduct = await menuServices.createProductMenu(req.body);
     res.status(201).json(newProduct);
   },
+
+  deleteProduct: async (req, res) => {
+    const { name } = req.body;
+    console.log(name);
+    const message = await menuServices.deleteProduct(name);
+    res.status(200).json(message);
+  }
 }
 
 module.exports = menuController;
