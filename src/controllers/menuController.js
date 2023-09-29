@@ -13,7 +13,6 @@ const menuController = {
 
   deleteProduct: async (req, res) => {
     const { name } = req.body;
-    console.log(name);
     const message = await menuServices.deleteProduct(name);
     res.status(200).json(message);
   }

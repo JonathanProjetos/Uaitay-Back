@@ -14,6 +14,7 @@ app.use(cookieParser());
 
 app.use(cors({
   origin: 'https://uai-tay-front.vercel.app',
+  // origin: 'http://localhost:3000',
   credentials: true,
 }));
 
