@@ -5,36 +5,50 @@ const menuProductsServices = {
 
   getAllProductsMenu: async () => {
     const allProducts = await products.find();
+
+    if(!allProducts) throw new Error('404|Nenhum produto cadastrado')
+
     return allProducts;
-  },
+  },  
 
   createProductMenu: async(data) => {
     const { name, price, category } = joiProduct.validadeBodyCreateProduct(data);
 
-    const allProducts = await products.find();
+    const product = await products.findOne({ name }).exec();
 
-    const productExists = allProducts.find((product) => product.name.toLowerCase() === name.toLowerCase());
-
-    if (productExists) throw new Error('409|Produto já cadastrado');
+    if (product) throw new Error('409|Produto já cadastrado');
 
     const newProduct = await products.create({ name, price, category});
     
     return newProduct;
   },
 
-  deleteProduct: async (name) => {
-    const strigName = joiProduct.validadeNameFromDeleteProduct(name);
+  deleteProduct: async (body) => {
 
-    const allProducts = await products.find();
+    const name = joiProduct.validadeNameProduct(body);
 
-    const productExists = allProducts.find((product) => product.name.toLowerCase() === strigName.toLowerCase());
+    const product = await products.findOne({ name }).exec();
 
-    if (!productExists) throw new Error('404|Produto não encontrado');
+    if (!product) throw new Error('404|Produto não encontrado');
 
-    const  result  = await products.deleteOne({ name: productExists.name });
+    const  result  = await products.deleteOne({ name: product.name });
 
     return result;
 
+  },
+
+  updateProduct: async (body) => {
+
+    const { name, price } = joiProduct.validadeBodyUpdateProduct(body);
+
+    const product = await products.findOne({ name }).exec();
+
+    if (!product) throw new Error('404|Produto não encontrado');
+
+    const result  = await products.updateOne({ name: product.name }, { price }, { new: true });
+
+    console.log(result);
+    return result;
   }
 
 }
