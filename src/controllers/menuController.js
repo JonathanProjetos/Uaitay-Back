@@ -15,6 +15,12 @@ const menuController = {
     const { name } = req.body;
     const message = await menuServices.deleteProduct(name);
     res.status(200).json(message);
+  },
+
+  updateProduct: async (req, res) => {
+    console.log(req.body);
+    const message = await menuServices.updateProduct(req.body);
+    res.status(200).json(message);
   }
 }
 
