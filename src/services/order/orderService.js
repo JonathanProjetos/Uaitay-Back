@@ -1,4 +1,4 @@
-const order = require("../../models/OrdesModel")
+const order = require("../../models/OrderModel")
 const { validateBodyCreateOrder } = require("../../middlewares/joiOrder")
 
 
