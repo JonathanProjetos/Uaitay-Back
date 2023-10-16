@@ -5,8 +5,8 @@ const MONGO_DB_URL = process.env.MONGO_URL;
 
 const connectToDataBase = async (mongoDataBaseName = 'uai-tay') => {
   try {
-    const mongoDataBaseURI = `${MONGO_DB_URL}`;
-      mongoose.connect(mongoDataBaseURI, {
+    const mongoDataBaseURI = `${MONGO_DB_URL}/${mongoDataBaseName}`;
+    await mongoose.connect(mongoDataBaseURI, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
