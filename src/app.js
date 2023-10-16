@@ -2,8 +2,9 @@ const express = require('express');
 require('dotenv').config();
 require('express-async-errors')
 const cors = require('cors');
-const RouteMenu = require('./routes/RouteMenu');
-const RouteUser = require('./routes/RouteUser');
+const RouteMenu = require('./routes/menu/RouteMenu');
+const RouteUser = require('./routes/user/RouteUser');
+const RouterOrder = require('./routes/order/RouteOrder');
 const cookieParser = require('cookie-parser');
 
 const app = express();
@@ -13,19 +14,19 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use(cors({
-  origin: 'https://uai-tay-front.vercel.app',
-  // origin: 'http://localhost:3000',
+  origin: process.env.FRONTEND_URL,
   credentials: true,
 }));
 
 app.use((_req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'https://uai-tay-front.vercel.app');
+  res.header('Access-Control-Allow-Origin', process.env.FRONTEND_URL);
   res.header('Access-Control-Allow-Credentials', true);
   next();
 });
 
 app.use('/', RouteMenu);
 app.use('/', RouteUser);
+app.use('/', RouterOrder);
 
 app.use((err, _req, res, _next) => {
   if (err.message.split('').includes('|')) {

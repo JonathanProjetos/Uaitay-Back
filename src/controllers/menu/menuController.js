@@ -1,4 +1,4 @@
-const menuServices = require('../services/menuServices');
+const menuServices = require('../../services/menu/menuServices');
 
 const menuController = {
   getAllProductsMenu: async (_req, res) => {

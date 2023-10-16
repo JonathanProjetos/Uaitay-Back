@@ -1,6 +1,6 @@
-const userModel = require('../models/UserModel');
-const joiUser = require('../middlewares/joiUser');
-const jwt = require('../middlewares/token');
+const userModel = require('../../models/UserModel');
+const joiUser = require('../../middlewares/joiUser');
+const jwt = require('../../middlewares/token');
 
 const userServices = {
 

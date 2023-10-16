@@ -1,5 +1,5 @@
-const products = require('../models/MenuModel');
-const joiProduct = require('../middlewares/joiProducts');
+const products = require('../../models/MenuModel');
+const joiProduct = require('../../middlewares/joiProducts');
 
 const menuProductsServices = {
 
