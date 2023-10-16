@@ -27,25 +27,25 @@ const menulist = [
     id: 5,
     name: 'Yakisoba Vegetariano (Grande)',
     price: 48.00,
-    category: 'Yaquisoba',
+    category: 'Yakisoba',
   },
   {
     id: 6,
     name: 'Yakisoba Vegetariano (Médio)',
     price: 42.50,
-    category: 'Yaquisoba',
+    category: 'Yakisoba',
   },
   {
     id: 7,
     name: 'Yakisoba Camarão (Grande)',
     price: 75.50,
-    category: 'Yaquisoba',
+    category: 'Yakisoba',
   },
   {
     id: 8,
     name: 'Yakisoba Camarão (Médio)',
     price: 63.00,
-    category: 'Yaquisoba',
+    category: 'Yakisoba',
   },
   {
     id: 9,
@@ -87,7 +87,7 @@ const menulist = [
     id: 15,
     name: 'Frango a passarinho (Grande)',
     price: 43.00,
-    category: 'F  rango',
+    category: 'Frango',
   },
   {
     id: 16,
