@@ -7,6 +7,12 @@ const  orderController = {
     res.status(200).json(orders);
   },
 
+  getOrderById: async (req, res) => {
+    const { id } = req.params;
+    const orderById = await orderServices.getOrderById(id);
+    res.status(200).json(orderById);
+  },
+
   createOrder: async (req, res) => {
     const { body } = req;
     const result = await orderServices.createOrder(body);
