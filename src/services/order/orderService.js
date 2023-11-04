@@ -8,9 +8,13 @@ const orderService = {
     const orders = await order.find();
     return orders;
   },
+
+  getOrderById: async (id) => {
+    const orderById = await order.findById(id);
+    return orderById;
+  },
   
   createOrder: async (body) => {
-    console.log(body);
     const data = validateBodyCreateOrder(body);
 
     const newOrder = await order.create(data);
