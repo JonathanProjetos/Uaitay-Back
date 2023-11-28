@@ -6,14 +6,10 @@ const userServices = {
 
   getUser: async (body) => {
     const { email, password } = joiUser(body);
-    console.log(email, password);
 
     const user = await userModel.findOne({ email, password });
 
-    console.log(user);
-
-    if (user === null) throw new Error('401|Usuario não encontrado');
-
+    if (user === null) throw new Error('401|Usuário não encontrado');
     const token = jwt.generateToken(email);
 
     return { menssage: 'Ok', token };

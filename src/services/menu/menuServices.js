@@ -14,7 +14,7 @@ const menuProductsServices = {
   createProductMenu: async(data) => {
     const { name, price, category } = joiProduct.validadeBodyCreateProduct(data);
 
-    const product = await products.findOne({ name }).exec();
+    const product = await products.findOne({ name });
 
     if (product) throw new Error('409|Produto já cadastrado');
 
@@ -27,7 +27,7 @@ const menuProductsServices = {
 
     const name = joiProduct.validadeNameProduct(body);
 
-    const product = await products.findOne({ name }).exec();
+    const product = await products.findOne({ name });
 
     if (!product) throw new Error('404|Produto não encontrado');
 
@@ -41,13 +41,12 @@ const menuProductsServices = {
 
     const { name, price } = joiProduct.validadeBodyUpdateProduct(body);
 
-    const product = await products.findOne({ name }).exec();
+    const product = await products.findOne({ name });
 
     if (!product) throw new Error('404|Produto não encontrado');
 
     const result  = await products.updateOne({ name: product.name }, { price }, { new: true });
 
-    console.log(result);
     return result;
   }
 
