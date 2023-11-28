@@ -47,7 +47,6 @@ const menuProductsServices = {
 
     const result  = await products.updateOne({ name: product.name }, { price }, { new: true });
 
-    console.log(result);
     return result;
   }
 
