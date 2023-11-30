@@ -43,6 +43,6 @@ describe('Create OrderModel with correct schema', () => {
     expect(order.date).to.equal("01-01-2021");
     expect(order.hours).to.equal("12:00:00");
     
-  })
+  });
 
 });

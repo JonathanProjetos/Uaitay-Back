@@ -9,8 +9,8 @@ const {
   checkAcessLogin
 } = require('../../../services/user/userServices')
 
-describe('Testando os caso de teste de userServices', () => {
-  describe('Testando os caso da função getUser', () => {
+describe('Testando os casos de teste de userServices', () => {
+  describe('Testando os casos da função getUser', () => {
     afterEach(() => sinon.restore());
 
     it('A função deve retorna um objeto contendo a confirmação "ok", mais o token.', async () => {
