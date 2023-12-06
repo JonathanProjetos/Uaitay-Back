@@ -7,12 +7,12 @@ const {
 } = require('../../../controllers/user/userController');
 const userServices = require('../../../services/user/userServices');
 
-describe('Testando os caso de test de userControllers', () => {
+describe('Testando os caso de teste de userControllers', () => {
 
   describe('Testando o caso de teste da função getUser', () => {
     afterEach(() => sinon.restore());
 
-    it('A função deve retornar os dados corretamente no formato de cookie como o status 200.', async () => {
+    it('A função deve responder os dados corretamente no formato de cookie como o status 200.', async () => {
 
       const req = {
         body : {
@@ -43,7 +43,7 @@ describe('Testando os caso de test de userControllers', () => {
   describe('Testando o caso de teste da função checkAcesslogin', () => {
     afterEach(() => sinon.restore());
 
-    it('A função deve retornar um objeto como resposta com o status 200', async () => {
+    it('A função deve responder um objeto como resposta com o status 200', async () => {
 
       const email = 'test@test.com';
 
