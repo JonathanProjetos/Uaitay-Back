@@ -1,5 +1,5 @@
 # Uaitay-Comida Chinesa (Back)
-Bem-vindo ao UaiTay - Comida Chinesa, uma aplicação back-end desenvolvida em Node.js. Esta plataforma foi criada com o objetivo de fornecer funcionalidades de CRUD relacionadas à gestão de pedidos de comida chinesa, com ênfase na geração de informativos para pedidos feitos diretamente com a loja. Além disso, a aplicação oferece autenticação através do cookie-parse para garantir a segurança das operações.
+Comida Chinesa, uma aplicação back-end desenvolvida em Node.js. Esta plataforma foi criada com o objetivo de fornecer funcionalidades de CRUD relacionadas à gestão de pedidos de comida chinesa, com ênfase na geração de informativos para pedidos feitos diretamente com a loja. Além disso, a aplicação oferece autenticação através do cookie-parse para garantir a segurança das operações.
 
 </details>
 
@@ -34,3 +34,30 @@ Este projeto utiliza as seguintes tecnologias e ferramentas:
 - [Cookie-Parse](https://www.npmjs.com/package/cookie-parser) | Middleware para transmissão de Token de forma segura.
 
 O Node.js foi utilizado com o intuito de obter os benefícios da escalabilidade e eficiência, pois ele é capaz de lidar com vários tráfegos sem bloqueio e lida com solicitações com baixo consumo de recursos. O MongoDB foi introduzido pensando em desempenho e flexibilidade. Este conjunto proporciona uma maior facilidade de adaptação e evolução do aplicativo, sem contar também que o MongoDB trabalha com documentos no formato JSON, que é um formato nativo em algumas linguagens. O Mongoose foi implementado por ser uma biblioteca poderosa e flexível que simplifica a interação com o MongoDB e adiciona recursos úteis, como validação de dados, tratamento de relacionamentos e ganchos personalizados. O Express é um framework para o Node.js que permite construir aplicações web robustas e escaláveis de forma mais fácil e rápida. O cookie-parser oferece recursos de segurança, como a capacidade de assinar cookies. Isso ajuda a garantir a integridade dos dados armazenados nos cookies, prevenindo a manipulação por parte do cliente.
+
+## Instalação e Execução
+### Download do projeto
+```
+git clone git@github.com:JonathanProjetos/Food-Delivery.git
+```
+
+### Arquivo env
+- Dentro da pasta Food-Delivery existe o arquivo .env.example nele será nescessário remover o .example e oferecer a url do MongoDB, e uma senha para o Json-Web-Token.
+
+
+### Instalar dependências
+```
+cd Food-Delivery
+docker compose up -d
+
+obs: O comando "docker compose up -d" vai instalar as dependências e tornar a aplicação disponível na porta 3001.
+```
+### Adicionar os Produtos
+- Após subir os conteiners docker, abra o terminal e rode os comandos abaixo.
+```
+docker exec -it food_delivery bash
+npm run products:import
+
+obs: Caso queira remover os produtos rode:
+npm run products:destroy
+```
