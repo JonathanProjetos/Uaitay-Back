@@ -8,6 +8,7 @@ Comida Chinesa, uma aplicação back-end desenvolvida em Node.js. Esta plataform
 - [Contexto](#contexto)
 - [Tecnologias e Ferramentas Utilizadas](#tecnologias-e-ferramentas-utilizadas)
 - [Instalação e Execução](#instalação-e-execução)
+- [Testes](#Tests)
 - [Git, GitHub e Histórico de Commits](#git-github-e-histórico-de-commits)
 
 ## Contexto
