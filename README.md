@@ -57,6 +57,16 @@ npm run dev
 cd Uaitay-Back
 npm run products:import
 
-obs: Caso queira remover os produtos rode:
+obs: Caso queira remover os produtos execute:
 npm run products:destroy
 ```
+### Tests
+```
+cd Food-Delivery
+npm test
+ou 
+npm run test:coverage
+```
+
+### Git, GitHub e Histórico de Commits
+Este projeto utilizou a [Especificação de Commits Convencionais](https://www.conventionalcommits.org/en/v1.0.0/), com alguns tipos da [convenção Angular](https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#-commit-message-guidelines). Além disso, foi utilizado o pacote [conventional-commit-cli](https://www.npmjs.com/package/conventional-commit-cli) para ajudar a seguir a convenção de commits. É importante utilizar a convenção de commits em projetos para manter o histórico de commits organizado e facilitar a leitura e o entendimento do que foi desenvolvido.
