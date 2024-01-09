@@ -43,7 +43,7 @@ git clone git@github.com:JonathanProjetos/Uaitay-Back.git
 ```
 
 ### Arquivo env
-- Dentro da pasta Food-Delivery existe o arquivo .env.example nele será nescessário remover o .example e oferecer a url do MongoDB, e uma senha para o Json-Web-Token.
+- Dentro da pasta Uaitay-Back existe o arquivo .env.example nele será nescessário remover o .example, caso queira executar com endereço de máquina local.
 
 
 ### Instalar dependências
