@@ -4,7 +4,7 @@ Bem-vindo ao UaiTay - Comida Chinesa, uma aplicação back-end desenvolvida em N
 </details>
 
 ## Sumário
-- [Bem-vindo ao Food Delivery](#Uaitay-Comida-Chinesa-(Back))
+- [Bem-vindo ao UaiTay Comida Chinesa](#Uaitay-Comida-Chinesa-(Back))
 
 
 ## Contexto
