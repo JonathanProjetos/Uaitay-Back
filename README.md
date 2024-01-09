@@ -47,13 +47,14 @@ git clone git@github.com:JonathanProjetos/Uaitay-Back.git
 
 ### Instalar dependências
 ```
-cd Food-Delivery
+cd Uaitay-Back
+npm install
 npm run dev
 ```
 ### Adicionar os Produtos
-- Após subir os conteiners docker, abra o terminal e rode os comandos abaixo.
+- Abra o terminal e rode os comandos abaixo.
 ```
-cd 
+cd Uaitay-Back
 npm run products:import
 
 obs: Caso queira remover os produtos rode:
