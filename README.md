@@ -44,7 +44,7 @@ git clone git@github.com:JonathanProjetos/Uaitay-Back.git
 ```
 
 ### Arquivo env
-- Dentro da pasta Uaitay-Back existe o arquivo .env.example nele será nescessário remover o .example, caso queira executar com endereço de máquina local.
+- Dentro da pasta Uaitay-Back, existe o arquivo .env.example. Nele, será necessário remover o .example caso queira executar na máquina local. O arquivo .env já contém um exemplo funcional de uso.
 
 
 ### Instalar dependências
