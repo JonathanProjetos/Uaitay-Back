@@ -7,7 +7,8 @@ Comida Chinesa, uma aplicação back-end desenvolvida em Node.js. Esta plataform
 - [Bem-vindo ao UaiTay Comida Chinesa](#Uaitay-Comida-Chinesa-(Back))
 - [Contexto](#contexto)
 - [Tecnologias e Ferramentas Utilizadas](#tecnologias-e-ferramentas-utilizadas)
-
+- [Instalação e Execução](#instalação-e-execução)
+- [Git, GitHub e Histórico de Commits](#git-github-e-histórico-de-commits)
 
 ## Contexto
 O Uaitay-Comida Chinesa é uma ferramenta que acessa a bases de dados, é permite aos usuários:
@@ -62,7 +63,7 @@ npm run products:destroy
 ```
 ### Tests
 ```
-cd Food-Delivery
+cd Uaitay-Back
 npm test
 ou 
 npm run test:coverage
