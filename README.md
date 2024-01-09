@@ -38,7 +38,7 @@ O Node.js foi utilizado com o intuito de obter os benefícios da escalabilidade 
 ## Instalação e Execução
 ### Download do projeto
 ```
-git clone git@github.com:JonathanProjetos/Food-Delivery.git
+git clone git@github.com:JonathanProjetos/Uaitay-Back.git
 ```
 
 ### Arquivo env
@@ -48,14 +48,12 @@ git clone git@github.com:JonathanProjetos/Food-Delivery.git
 ### Instalar dependências
 ```
 cd Food-Delivery
-docker compose up -d
-
-obs: O comando "docker compose up -d" vai instalar as dependências e tornar a aplicação disponível na porta 3001.
+npm run dev
 ```
 ### Adicionar os Produtos
 - Após subir os conteiners docker, abra o terminal e rode os comandos abaixo.
 ```
-docker exec -it food_delivery bash
+cd 
 npm run products:import
 
 obs: Caso queira remover os produtos rode:
