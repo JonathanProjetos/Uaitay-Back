@@ -5,6 +5,8 @@ Bem-vindo ao UaiTay - Comida Chinesa, uma aplicação back-end desenvolvida em N
 
 ## Sumário
 - [Bem-vindo ao UaiTay Comida Chinesa](#Uaitay-Comida-Chinesa-(Back))
+- [Contexto](#contexto)
+- [Tecnologias e Ferramentas Utilizadas](#tecnologias-e-ferramentas-utilizadas)
 
 
 ## Contexto
