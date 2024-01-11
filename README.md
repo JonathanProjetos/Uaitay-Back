@@ -29,13 +29,13 @@ __Quando logado é possivel__
 
 Este projeto utiliza as seguintes tecnologias e ferramentas:
 
-- [NodeJS](https://nextjs.org/docs) | Framework para React. 
-- [MaterialUi](https://mui.com/material-ui/) | Biblioteca de componentes de estilo para React.
-- [Axios](https://axios-http.com/ptbr/docs/api_intro) | Biblioteca em JavaScript que lida com requisições HTTP.
+- [NodeJS](https://nodejs.org/en/) | Plataforma de execução runtime baseda em javascript. 
+- [MongoDB](https://www.mongodb.com/docs/) | Banco de dados NoSQL não-relacional.
+- [Moongose](https://mongoosejs.com/docs/) | ODM Object-documente-Mapper para MongoDB
 - [Express](https://expressjs.com/pt-br/) | Framework para nodejs
 - [Cookie-Parse](https://www.npmjs.com/package/cookie-parser) | Middleware para transmissão de Token de forma segura.
 
-O Next.js é um framework de desenvolvimento web para React.js que simplifica e acelera a criação de aplicativos web modernos. Ele oferece recursos poderosos, como roteamento automático, pré-renderização, carregamento otimizado de páginas, suporte a CSS modular, entre outros.O Material-UI fornece uma variedade de componentes reutilizáveis, como botões, barras de navegação, caixas de diálogo, entre outros, que seguem as diretrizes visuais e de interação do Material Design. O Axios é uma biblioteca popular em JavaScript, geralmente utilizada em ambientes de navegador ou em Node.js, para fazer requisições HTTP. Ele fornece uma interface fácil de usar para realizar solicitações tanto para servidores HTTP como para APIs. O Express é um framework para o Node.js que permite construir aplicações web robustas e escaláveis de forma mais fácil e rápida. O cookie-parser oferece recursos de segurança, como a capacidade de assinar cookies. Isso ajuda a garantir a integridade dos dados armazenados nos cookies, prevenindo a manipulação por parte do cliente.
+O Node.js foi utilizado com o intuito de obter os benefícios da escalabilidade e eficiência, pois ele é capaz de lidar com vários tráfegos sem bloqueio e lida com solicitações com baixo consumo de recursos. O MongoDB foi introduzido pensando em desempenho e flexibilidade. Este conjunto proporciona uma maior facilidade de adaptação e evolução do aplicativo, sem contar também que o MongoDB trabalha com documentos no formato JSON, que é um formato nativo em algumas linguagens. O Mongoose foi implementado por ser uma biblioteca poderosa e flexível que simplifica a interação com o MongoDB e adiciona recursos úteis, como validação de dados, tratamento de relacionamentos e ganchos personalizados. O Express é um framework para o Node.js que permite construir aplicações web robustas e escaláveis de forma mais fácil e rápida. O cookie-parser oferece recursos de segurança, como a capacidade de assinar cookies. Isso ajuda a garantir a integridade dos dados armazenados nos cookies, prevenindo a manipulação por parte do cliente.
 
 ## Instalação e Execução
 ### Download do projeto
