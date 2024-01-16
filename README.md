@@ -15,7 +15,7 @@ UaiTay Comida Chinesa, uma aplicação back-end desenvolvida em Node.js. Esta pl
 O Uaitay-Comida Chinesa é uma ferramenta que acessa a bases de dados, é permite aos usuários:
 - Fazer login;
 - Criar ordem de pedido;
-- Imprimir pedido;
+- Buscar pedidos;
 
 __Quando logado é possivel__
 - Criar novos produtos;
@@ -23,7 +23,7 @@ __Quando logado é possivel__
 - Atualizar um produto;
 - Deletar um pedido;
 - Deletar um produto;
-- Imprimir pedido;
+- Buscar pedidos;
 
 ## Tecnologias e Ferramentas Utilizadas
 
